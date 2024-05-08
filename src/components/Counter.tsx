@@ -4,7 +4,7 @@ import { AppDispatch, RootState } from '../state/store.ts'
 import { decrement, increment, incrementByAmount, incrementAsync } from '../state/counter/counterSlice.ts'
 
 export default function Counter() {
-  const count = useSelector((state: RootState) => state.counter.value)
+  const count = useSelector((state: RootState) => state.counter.value) // use useSelector to get the value from root state
   const dispatch = useDispatch<AppDispatch>() // add the appdispatch when using async
 
   const [amount, setAmount] = useState<number | null>(null)

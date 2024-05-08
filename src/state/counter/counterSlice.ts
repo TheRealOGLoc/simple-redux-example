@@ -18,7 +18,7 @@ const counterSlice = createSlice({
         decrement: (state) => {
             state.value -= 1
         },
-        incrementByAmount: (state, action: PayloadAction<number>) => {
+        incrementByAmount: (state, action: PayloadAction<number>) => {  //PayloadAction: type of action
             state.value += action.payload
         }
     },
@@ -33,7 +33,7 @@ const counterSlice = createSlice({
     }
 })
 
-export const incrementAsync = createAsyncThunk(
+export const incrementAsync = createAsyncThunk( // use createAsyncThunk to create async function
     "counter/incrementAsync",
     async (amount: number) => {
         await new Promise((resolve) => setTimeout(resolve, 1000))
