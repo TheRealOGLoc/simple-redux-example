@@ -9,7 +9,7 @@ export default function Counter() {
 
   const [amount, setAmount] = useState<number | null>(null)
 
-  const handleChange = (e): void => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const amountInt = parseInt(e.target.value)
     setAmount(amountInt)
   }
